@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS App</title>
+
+	<link rel="stylesheet" href="style.css">
+	<script defer src="vendors.js"></script>
+	<script defer src="main.js"></script>
+</head>
+<body ng-app="myApp" ng-cloak ng-controller="rootCtrl">
+	<p>I can add: {{ 1+2 }}.</p>
+	<p>=== {{test}} ===</p>
+	<my-component my-prop="testProp"></my-component>
+</body>
+</html>

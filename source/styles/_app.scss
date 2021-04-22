@@ -1,0 +1,20 @@
+html {height:100%}
+body {
+	height:100%;
+	min-height:auto;
+	background:$background;
+	color:$textPrimary;
+	font-family:'Roboto', sans-serif;
+	font-size:13px;
+}
+
+.my-component {
+	display:inline-block;
+	background-color:$alarmingHover;
+	padding:15px;
+	border:2px dotted $alarming;
+
+	p {
+		color:$badHover;
+	}
+}

@@ -1,0 +1,37 @@
+{
+  "name": "angularjs-with-es6",
+  "version": "1.0.0",
+  "description": "Build AngularJS app with last version of JavaScript (ES6+)",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-animate": "^1.8.2",
+    "angular-route": "^1.8.2",
+    "angular-sanitize": "^1.8.2",
+    "angular-translate": "^2.18.4",
+    "angular-ui-bootstrap": "^2.5.6"
+  },
+  "devDependencies": {
+    "snowpack": "^3.3.5",
+    "@snowpack/plugin-sass": "^1.4.0",
+    "snowpack-plugin-inliner": "^1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlada-j/AngularJS-with-ES6.git"
+  },
+  "keywords": [
+    "angularjs",
+    "javascript",
+    "es6"
+  ],
+  "author": "vladajanosevic@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vlada-j/AngularJS-with-ES6/issues"
+  },
+  "homepage": "https://github.com/vlada-j/AngularJS-with-ES6#readme"
+}
