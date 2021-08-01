@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Build AngularJS app with last version of JavaScript (ES6+)",
   "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build"
+    "serve": "http-server ./public_html/ -s",
+    "build-js": "esbuild source/main.js --watch --bundle --minify --outfile=public_html/main.js --target=es6",
+    "build-css": "sass --style=compressed --no-source-map --watch source/style.scss public_html/style.css",
+    "build-tpl": "cpx \"source/**/*.{html,png,jpg}\" public_html/ --watch",
+    "build-vendors": "esbuild source/vendors.js --bundle --minify --outfile=public_html/vendors.js --target=es6"
   },
   "dependencies": {
     "angular": "^1.8.2",
@@ -15,9 +18,10 @@
     "angular-ui-bootstrap": "^2.5.6"
   },
   "devDependencies": {
-    "snowpack": "^3.3.5",
-    "@snowpack/plugin-sass": "^1.4.0",
-    "snowpack-plugin-inliner": "^1.0.2"
+    "cpx": "^1.5.0",
+    "esbuild": "^0.12.17",
+    "http-server": "^0.12.3",
+    "sass": "^1.37.0"
   },
   "repository": {
     "type": "git",

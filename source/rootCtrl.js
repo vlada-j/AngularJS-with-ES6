@@ -8,4 +8,12 @@ function rootCtrl($rootScope) {
 		name: 'Naomi',
 		address: '1600 Amphitheatre'
 	}
+
+	$rootScope.lazyValue = []
+	$rootScope.lazyLoad = function() {
+		import(/*lazy*/'./lazy.js').then(m => {
+			console.log('Module', m.default);
+			$rootScope.lazyValue = m.default;
+		})
+	}
 }
